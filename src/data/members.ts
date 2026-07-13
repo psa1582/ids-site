@@ -75,6 +75,7 @@ export const msStudents: Member[] = [
   {
     name: "Sanghoo Lee",
     role: "MS Student",
+    interests: ["Neural Processing Unit"],
   },
   {
     name: "Sungan Park",
@@ -86,4 +87,5 @@ export const msStudents: Member[] = [
 
 export const alumni = [
   "Seungho Lee (Master) - Currently @ Hyundai Motors",
+  "Inkyo Lee (Master) - Currently @ FADU",
 ];
