@@ -75,7 +75,7 @@ export const msStudents: Member[] = [
   {
     name: "Sanghoo Lee",
     role: "MS Student",
-    interests: ["Neural Processing Unit"],
+    interests: ["ML-based VLSI Design"],
   },
   {
     name: "Sungan Park",
