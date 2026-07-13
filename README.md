@@ -26,11 +26,11 @@ To build the static site:
 
 This repository includes `.github/workflows/deploy.yml`. After pushing to a GitHub repository and enabling GitHub Pages with GitHub Actions, pushes to `main` build and publish the site.
 
-For a local project-page build such as `https://username.github.io/ids-lab-site/`, set:
+For a local project-page build such as `https://username.github.io/ids-site/`, set:
 
 ```powershell
 $env:PUBLIC_SITE_URL="https://username.github.io"
-$env:PUBLIC_BASE_PATH="/ids-lab-site/"
+$env:PUBLIC_BASE_PATH="/ids-site/"
 .\build.cmd
 ```
 
