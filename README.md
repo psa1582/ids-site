@@ -22,6 +22,20 @@ To build the static site:
 - `src/data/members.ts`: professor, students, alumni
 - `src/data/publications.ts`: conference and journal publications
 
+## Member Photos
+
+Put public member photos under `public/members/`, then set `photo` in `src/data/members.ts`.
+
+```ts
+{
+  name: "Example Student",
+  role: "MS Student",
+  email: "student@g.skku.edu",
+  interests: ["Neural Processing Unit"],
+  photo: "members/example-student.jpg",
+}
+```
+
 ## GitHub Pages
 
 This repository includes `.github/workflows/deploy.yml`. After pushing to a GitHub repository and enabling GitHub Pages with GitHub Actions, pushes to `main` build and publish the site.

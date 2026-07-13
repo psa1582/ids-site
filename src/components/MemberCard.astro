@@ -12,10 +12,26 @@ const initials = member.name
   .join("")
   .slice(0, 2)
   .toUpperCase();
+const photoSrc = member.photo
+  ? member.photo.startsWith("http") || member.photo.startsWith("/")
+    ? member.photo
+    : `${import.meta.env.BASE_URL}${member.photo}`
+  : "";
 ---
 
 <article class="member-card">
-  <div class="avatar" aria-hidden="true">{initials}</div>
+  {
+    member.photo ? (
+      <img
+        class="member-photo"
+        src={photoSrc}
+        alt={member.photoAlt || `${member.name} portrait`}
+        loading="lazy"
+      />
+    ) : (
+      <div class="avatar" aria-hidden="true">{initials}</div>
+    )
+  }
   <div class="member-meta">
     <small>{member.role}</small>
     <h3>{member.name}</h3>

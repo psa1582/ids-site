@@ -3,6 +3,8 @@ export type Member = {
   role: string;
   email?: string;
   interests?: string[];
+  photo?: string;
+  photoAlt?: string;
 };
 
 export const professor: Member = {
@@ -43,6 +45,16 @@ export const phdStudents: Member[] = [
     email: "j168816@g.skku.edu",
     interests: ["Network-on-Chip", "AI Accelerators"],
   },
+  {
+    name: "Beomjin Kim",
+    role: "PhD / Combined MS-PhD Student",
+    email: "kimb@g.skku.edu",
+  },
+  {
+    name: "Wonjong Park",
+    role: "PhD / Combined MS-PhD Student",
+    email: "dnjswhd71@g.skku.edu",
+  },
 ];
 
 export const msStudents: Member[] = [
@@ -65,6 +77,11 @@ export const msStudents: Member[] = [
     interests: ["Accelerator for 3DGS SLAM"],
   },
   {
+    name: "Sungan Park",
+    role: "MS Student",
+    email: "psa1582@g.skku.edu",
+  },
+  {
     name: "Jaeyoung Gong",
     role: "MS Student",
     interests: ["Neural Processing Unit"],
@@ -72,6 +89,11 @@ export const msStudents: Member[] = [
   {
     name: "Sanghoo Lee",
     role: "MS Student",
+  },
+  {
+    name: "Jaemoo Hwang",
+    role: "MS Student",
+    email: "jaemoo00@g.skku.edu",
   },
 ];
 

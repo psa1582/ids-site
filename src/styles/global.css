@@ -390,15 +390,24 @@ img {
   padding: 20px;
 }
 
-.avatar {
+.avatar,
+.member-photo {
   display: grid;
   width: 54px;
   height: 54px;
-  place-items: center;
   border-radius: 8px;
+}
+
+.avatar {
+  place-items: center;
   background: var(--soft);
   color: var(--green);
   font-weight: 900;
+}
+
+.member-photo {
+  object-fit: cover;
+  background: var(--soft);
 }
 
 .member-meta {
