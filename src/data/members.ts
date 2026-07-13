@@ -61,22 +61,10 @@ export const phdStudents: Member[] = [
 
 export const msStudents: Member[] = [
   {
-    name: "Inkyo Lee",
-    role: "MS Student",
-    email: "lik0712@g.skku.edu",
-    interests: ["Neural Processing Unit"],
-  },
-  {
     name: "Donghyun Nam",
     role: "MS Student",
     email: "nam3918@g.skku.edu",
     interests: ["Neural Processing Unit"],
-  },
-  {
-    name: "Hyukjun Kwon",
-    role: "MS Student",
-    email: "hyukjun@skku.edu",
-    interests: ["Accelerator for 3DGS SLAM"],
   },
   {
     name: "Jaeyoung Gong",
@@ -98,5 +86,4 @@ export const msStudents: Member[] = [
 
 export const alumni = [
   "Seungho Lee (Master) - Currently @ Hyundai Motors",
-  "Inkyo Lee (Master) - Currently @ FADU",
 ];
