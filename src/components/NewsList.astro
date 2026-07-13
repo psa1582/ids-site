@@ -1,0 +1,15 @@
+---
+import { news } from "@data/site";
+---
+
+<div class="news-list">
+  {news.map((item) => (
+    <article class="news-item">
+      <div class="news-date">{item.date}</div>
+      <div>
+        <h3>{item.title}</h3>
+        <p>{item.detail}</p>
+      </div>
+    </article>
+  ))}
+</div>

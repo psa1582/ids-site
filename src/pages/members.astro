@@ -1,0 +1,57 @@
+---
+import MemberCard from "@components/MemberCard.astro";
+import PageHero from "@components/PageHero.astro";
+import SectionHeading from "@components/SectionHeading.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import { alumni, msStudents, phdStudents, professor } from "@data/members";
+---
+
+<BaseLayout title="Members" description="IDS Lab members at Sungkyunkwan University.">
+  <PageHero
+    eyebrow="Members"
+    title="People"
+    text="Our group brings together students and researchers working across digital VLSI, AI accelerators, neuromorphic systems, and hardware-oriented algorithms."
+  />
+
+  <section class="section">
+    <div class="container">
+      <SectionHeading title="Professor" />
+      <div class="grid three">
+        <MemberCard member={professor} />
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container">
+      <SectionHeading title="PhD and combined MS-PhD students" />
+      <div class="grid three">
+        {phdStudents.map((member) => <MemberCard member={member} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <SectionHeading title="MS students" />
+      <div class="grid three">
+        {msStudents.map((member) => <MemberCard member={member} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt compact">
+    <div class="container">
+      <SectionHeading title="Alumni" />
+      <div class="grid two">
+        {alumni.map((person) => (
+          <article class="member-card">
+            <div class="member-meta">
+              <h3>{person}</h3>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

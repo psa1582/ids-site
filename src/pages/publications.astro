@@ -1,0 +1,33 @@
+---
+import PageHero from "@components/PageHero.astro";
+import PublicationItem from "@components/PublicationItem.astro";
+import SectionHeading from "@components/SectionHeading.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import { conferencePublications, journalPublications } from "@data/publications";
+---
+
+<BaseLayout title="Publications" description="Selected IDS Lab conference and journal publications.">
+  <PageHero
+    eyebrow="Publications"
+    title="Selected publications"
+    text="Recent and representative papers from the IDS Lab in digital VLSI, accelerator architecture, neuromorphic processors, and machine-learning hardware."
+  />
+
+  <section class="section">
+    <div class="container">
+      <SectionHeading title="Top-tier conference proceedings" />
+      <div class="publication-list">
+        {conferencePublications.map((publication) => <PublicationItem publication={publication} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container">
+      <SectionHeading title="Journal publications" />
+      <div class="publication-list">
+        {journalPublications.map((publication) => <PublicationItem publication={publication} />)}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

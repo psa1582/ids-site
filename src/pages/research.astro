@@ -1,0 +1,27 @@
+---
+import PageHero from "@components/PageHero.astro";
+import ResearchCard from "@components/ResearchCard.astro";
+import SectionHeading from "@components/SectionHeading.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import { lab, researchAreas } from "@data/site";
+---
+
+<BaseLayout title="Research" description="IDS Lab research areas in digital VLSI, neural processing units, neuromorphic computing, accelerators, and hardware SAT solvers.">
+  <PageHero
+    eyebrow="Research"
+    title="Research areas"
+    text="The IDS Lab studies hardware architectures and algorithms for intelligent, efficient, and scalable digital systems."
+  />
+
+  <section class="section">
+    <div class="container">
+      <SectionHeading
+        title="Core directions"
+        text={lab.summary}
+      />
+      <div class="grid two">
+        {researchAreas.map((area) => <ResearchCard {...area} />)}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

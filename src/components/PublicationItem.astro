@@ -1,0 +1,19 @@
+---
+import type { Publication } from "@data/publications";
+
+type Props = {
+  publication: Publication;
+};
+
+const { publication } = Astro.props;
+---
+
+<article class="publication-item">
+  <div class="pub-year">{publication.year}</div>
+  <div>
+    <h3>{publication.title}</h3>
+    <p>{publication.authors}</p>
+    <p class="pub-venue">{publication.venue}</p>
+    {publication.note && <p>{publication.note}</p>}
+  </div>
+</article>

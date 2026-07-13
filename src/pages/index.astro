@@ -1,0 +1,75 @@
+---
+import NewsList from "@components/NewsList.astro";
+import ResearchCard from "@components/ResearchCard.astro";
+import SectionHeading from "@components/SectionHeading.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import { lab, quickStats, researchAreas } from "@data/site";
+
+const base = import.meta.env.BASE_URL;
+const heroImage = `${base}assets/ids-hero.png`;
+const withBase = (href: string) => `${base}${href.replace(/^\//, "")}`;
+---
+
+<BaseLayout>
+  <section class="hero" aria-label="IDS Lab introduction">
+    <img class="hero-image" src={heroImage} alt="Semiconductor wafer and intelligent accelerator circuitry" />
+    <div class="container hero-content">
+      <span class="eyebrow">{lab.affiliation}</span>
+      <h1>{lab.name}</h1>
+      <p>{lab.summary}</p>
+      <div class="hero-actions">
+        <a class="button primary" href={withBase("/research")}>Explore Research</a>
+        <a class="button secondary" href={withBase("/contact")}>Contact the Lab</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="stat-strip" aria-label="IDS Lab snapshot">
+    {quickStats.map((stat) => (
+      <div class="stat">
+        <strong>{stat.value}</strong>
+        <span>{stat.label}</span>
+      </div>
+    ))}
+  </div>
+
+  <section class="section alt">
+    <div class="container split">
+      <div>
+        <SectionHeading
+          eyebrow="Mission"
+          title="Building the next generation of intelligent digital systems"
+          text={lab.mission}
+        />
+      </div>
+      <div class="callout">
+        <h2>Recruiting motivated students</h2>
+        <p>{lab.recruitment}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <SectionHeading
+        eyebrow="Research"
+        title="Architecture research grounded in real systems"
+        text="Our research portfolio spans digital VLSI, AI accelerators, neuromorphic computing, and hardware-oriented optimization."
+      />
+      <div class="grid two">
+        {researchAreas.map((area) => <ResearchCard {...area} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt compact">
+    <div class="container split">
+      <SectionHeading
+        eyebrow="News"
+        title="Recent updates"
+        text="Highlights from publications, research themes, and recruiting."
+      />
+      <NewsList />
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,19 @@
+---
+type Props = {
+  title: string;
+  eyebrow: string;
+  description: string;
+  themes: string[];
+};
+
+const { title, eyebrow, description, themes } = Astro.props;
+---
+
+<article class="research-card">
+  <span class="eyebrow">{eyebrow}</span>
+  <h3>{title}</h3>
+  <p>{description}</p>
+  <ul class="theme-list" aria-label={`${title} themes`}>
+    {themes.map((theme) => <li>{theme}</li>)}
+  </ul>
+</article>

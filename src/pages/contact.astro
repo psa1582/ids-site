@@ -1,0 +1,51 @@
+---
+import PageHero from "@components/PageHero.astro";
+import SectionHeading from "@components/SectionHeading.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import { contact, lab } from "@data/site";
+---
+
+<BaseLayout title="Contact" description="Contact IDS Lab at Sungkyunkwan University.">
+  <PageHero
+    eyebrow="Contact"
+    title="Visit or contact the lab"
+    text="Students interested in joining IDS Lab are encouraged to reach out with their research interests and background."
+  />
+
+  <section class="section">
+    <div class="container split">
+      <div>
+        <SectionHeading
+          title="Intelligent Digital Systems Lab"
+          text={lab.recruitment}
+        />
+      </div>
+      <div class="contact-panel">
+        <dl>
+          <div>
+            <dt>Professor</dt>
+            <dd>{contact.professor}</dd>
+          </div>
+          <div>
+            <dt>Email</dt>
+            <dd><a href={`mailto:${contact.email}`}>{contact.email}</a></dd>
+          </div>
+          <div>
+            <dt>Phone</dt>
+            <dd>{contact.phone}</dd>
+          </div>
+          <div>
+            <dt>Address</dt>
+            <dd>
+              {contact.addressLines.map((line) => (
+                <>
+                  {line}<br />
+                </>
+              ))}
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

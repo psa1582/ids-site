@@ -1,0 +1,29 @@
+---
+import type { Member } from "@data/members";
+
+type Props = {
+  member: Member;
+};
+
+const { member } = Astro.props;
+const initials = member.name
+  .split(" ")
+  .map((part) => part[0])
+  .join("")
+  .slice(0, 2)
+  .toUpperCase();
+---
+
+<article class="member-card">
+  <div class="avatar" aria-hidden="true">{initials}</div>
+  <div class="member-meta">
+    <small>{member.role}</small>
+    <h3>{member.name}</h3>
+    {member.email && <a class="member-email" href={`mailto:${member.email}`}>{member.email}</a>}
+  </div>
+  {member.interests && member.interests.length > 0 && (
+    <ul class="theme-list" aria-label={`${member.name} research interests`}>
+      {member.interests.map((interest) => <li>{interest}</li>)}
+    </ul>
+  )}
+</article>
