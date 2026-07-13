@@ -229,6 +229,7 @@ img {
 .stat {
   background: var(--surface);
   padding: 28px 24px;
+  text-align: center;
 }
 
 .stat strong {
