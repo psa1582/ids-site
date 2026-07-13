@@ -89,4 +89,5 @@ export const msStudents: Member[] = [
 export const alumni = [
   "Seungho Lee (Master) - Currently @ Hyundai Motors",
   "Inkyo Lee (Master) - Currently @ FADU",
+  "Hyukjun Kwon (Master) - Currently @ MOBILINT",
 ];
