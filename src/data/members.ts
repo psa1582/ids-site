@@ -49,11 +49,13 @@ export const phdStudents: Member[] = [
     name: "Beomjin Kim",
     role: "PhD / Combined MS-PhD Student",
     email: "kimb@g.skku.edu",
+    interests: ["Neural Processing Unit"],
   },
   {
     name: "Wonjong Park",
     role: "PhD / Combined MS-PhD Student",
     email: "dnjswhd71@g.skku.edu",
+    interests: ["Network-on-Chip"],
   },
 ];
 
@@ -80,10 +82,12 @@ export const msStudents: Member[] = [
     name: "Sungan Park",
     role: "MS Student",
     email: "psa1582@g.skku.edu",
+    interests: ["Neural Processing Unit"],
   },
   {
     name: "Jaeyoung Gong",
     role: "MS Student",
+    email: "danieljk1119@gmail.com",
     interests: ["Neural Processing Unit"],
   },
   {
