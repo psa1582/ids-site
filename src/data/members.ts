@@ -79,12 +79,6 @@ export const msStudents: Member[] = [
     interests: ["Accelerator for 3DGS SLAM"],
   },
   {
-    name: "Sungan Park",
-    role: "MS Student",
-    email: "psa1582@g.skku.edu",
-    interests: ["Neural Processing Unit"],
-  },
-  {
     name: "Jaeyoung Gong",
     role: "MS Student",
     email: "danieljk1119@gmail.com",
@@ -95,9 +89,10 @@ export const msStudents: Member[] = [
     role: "MS Student",
   },
   {
-    name: "Jaemoo Hwang",
+    name: "Sungan Park",
     role: "MS Student",
-    email: "jaemoo00@g.skku.edu",
+    email: "psa1582@g.skku.edu",
+    interests: ["Neural Processing Unit"],
   },
 ];
 
