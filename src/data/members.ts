@@ -69,6 +69,10 @@ export const msStudents: Member[] = [
     role: "MS Student",
     interests: ["Neural Processing Unit"],
   },
+  {
+    name: "Sanghoo Lee",
+    role: "MS Student",
+  },
 ];
 
 export const alumni = [
