@@ -393,23 +393,26 @@ img {
 
 .avatar,
 .member-photo {
-  display: grid;
-  width: 72px;
-  height: 72px;
   border-radius: 8px;
+  background: var(--soft);
 }
 
 .avatar {
+  display: grid;
+  width: 72px;
+  height: 72px;
   place-items: center;
-  background: var(--soft);
   color: var(--green);
   font-weight: 900;
 }
 
 .member-photo {
-  object-fit: cover;
-  object-position: center top;
-  background: var(--soft);
+  display: block;
+  width: 96px;
+  height: 120px;
+  border: 1px solid var(--line);
+  object-fit: contain;
+  object-position: center;
 }
 
 .member-meta {
