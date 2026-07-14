@@ -3,6 +3,8 @@ import PageHero from "@components/PageHero.astro";
 import SectionHeading from "@components/SectionHeading.astro";
 import BaseLayout from "@layouts/BaseLayout.astro";
 import { contact, lab } from "@data/site";
+
+const professorPhoto = `${import.meta.env.BASE_URL}members/jeongwoo-park.jpg`;
 ---
 
 <BaseLayout title="Contact" description="Contact IDS Lab at Sungkyunkwan University.">
@@ -21,11 +23,14 @@ import { contact, lab } from "@data/site";
         />
       </div>
       <div class="contact-panel">
-        <dl>
+        <div class="contact-profile">
+          <img src={professorPhoto} alt="Jeongwoo Park portrait" loading="lazy" />
           <div>
-            <dt>Professor</dt>
-            <dd>{contact.professor}</dd>
+            <span>Professor</span>
+            <strong>{contact.professor}</strong>
           </div>
+        </div>
+        <dl>
           <div>
             <dt>Email</dt>
             <dd><a href={`mailto:${contact.email}`}>{contact.email}</a></dd>

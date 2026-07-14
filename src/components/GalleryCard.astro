@@ -1,0 +1,32 @@
+---
+import type { GalleryEvent } from "@data/gallery";
+
+type Props = {
+  event: GalleryEvent;
+};
+
+const { event } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const withBase = (href: string) => `${base}${href.replace(/^\//, "")}`;
+const coverSrc = event.cover ? withBase(event.cover) : "";
+---
+
+<article class="gallery-card">
+  <a href={withBase(`/gallery/${event.slug}`)} aria-label={`${event.title} gallery`}>
+    {
+      coverSrc ? (
+        <img class="gallery-card-image" src={coverSrc} alt={`${event.title} cover`} loading="lazy" />
+      ) : (
+        <div class="gallery-card-placeholder" aria-hidden="true">
+          <span>{event.dateLabel}</span>
+          <strong>{event.title}</strong>
+        </div>
+      )
+    }
+    <div class="gallery-card-body">
+      <time datetime={event.date}>{event.dateLabel}</time>
+      <h3>{event.title}</h3>
+      {event.location && <p>{event.location}</p>}
+    </div>
+  </a>
+</article>

@@ -16,6 +16,7 @@ export const navItems = [
   { label: "Research", href: "/research" },
   { label: "Members", href: "/members" },
   { label: "Publications", href: "/publications" },
+  { label: "Gallery", href: "/gallery" },
   { label: "Contact", href: "/contact" },
 ];
 

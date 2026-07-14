@@ -6,7 +6,9 @@ const currentPath = Astro.url.pathname.replace(base, "/").replace(/\/$/, "") || 
 const withBase = (href: string) => `${base}${href.replace(/^\//, "")}`;
 const isCurrent = (href: string) => {
   const normalized = href.replace(/\/$/, "") || "/";
-  return currentPath === normalized;
+  return normalized === "/"
+    ? currentPath === normalized
+    : currentPath === normalized || currentPath.startsWith(`${normalized}/`);
 };
 ---
 

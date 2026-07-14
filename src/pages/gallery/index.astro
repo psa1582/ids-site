@@ -1,0 +1,22 @@
+---
+import GalleryCard from "@components/GalleryCard.astro";
+import PageHero from "@components/PageHero.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import { galleryEvents } from "@data/gallery";
+---
+
+<BaseLayout title="Gallery" description="IDS Lab gallery of conferences, lab events, and group memories.">
+  <PageHero
+    eyebrow="Gallery"
+    title="Lab moments"
+    text="Conference trips, research events, and snapshots from the IDS Lab community."
+  />
+
+  <section class="section">
+    <div class="container">
+      <div class="gallery-grid">
+        {galleryEvents.map((event) => <GalleryCard event={event} />)}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
