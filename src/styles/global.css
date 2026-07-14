@@ -402,6 +402,20 @@ img {
   padding: 20px;
 }
 
+.alumni-grid {
+  gap: 10px;
+}
+
+.alumni-card {
+  min-height: 0;
+  padding: 14px 16px;
+}
+
+.alumni-card h3 {
+  font-size: 17px;
+  line-height: 1.25;
+}
+
 .avatar,
 .member-photo {
   border-radius: 8px;
