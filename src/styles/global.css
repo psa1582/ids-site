@@ -220,7 +220,7 @@ img {
 
 .stat-strip {
   display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  grid-template-columns: minmax(0, calc(45% + 24px)) minmax(0, 1fr);
   gap: 1px;
   width: min(1120px, calc(100% - 40px));
   margin: -1px auto 0;
