@@ -58,7 +58,7 @@ export const phdStudents: Member[] = [
     name: "Beomjin Kim",
     role: "PhD / Combined MS-PhD Student",
     email: "kimb@g.skku.edu",
-    interests: ["Neural Processing Unit"],
+    interests: ["Neuromorphic Systems"],
     portfolioUrl: "",
   },
   {
