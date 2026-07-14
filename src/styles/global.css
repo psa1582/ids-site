@@ -220,9 +220,12 @@ img {
 
 .stat-strip {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1px;
-  margin-top: -1px;
+  width: min(720px, calc(100% - 40px));
+  margin: -1px auto 0;
+  border: 1px solid var(--line);
+  border-top: 0;
   background: var(--line);
 }
 
@@ -324,6 +327,7 @@ img {
 .theme-list {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 8px;
   margin: 2px 0 0;
   padding: 0;
@@ -331,12 +335,19 @@ img {
 }
 
 .theme-list li {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  max-width: 100%;
   border: 1px solid rgba(39, 92, 141, 0.2);
   border-radius: 999px;
   color: var(--blue);
   font-size: 12px;
   font-weight: 800;
+  line-height: 1.2;
   padding: 5px 9px;
+  text-align: center;
   background: #f4f8fb;
 }
 
@@ -556,6 +567,10 @@ img {
   .grid.three,
   .split {
     grid-template-columns: 1fr;
+  }
+
+  .stat-strip {
+    width: min(100% - 40px, 360px);
   }
 
   .section {

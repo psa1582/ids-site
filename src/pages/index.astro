@@ -1,9 +1,8 @@
 ---
 import NewsList from "@components/NewsList.astro";
-import ResearchCard from "@components/ResearchCard.astro";
 import SectionHeading from "@components/SectionHeading.astro";
 import BaseLayout from "@layouts/BaseLayout.astro";
-import { lab, quickStats, researchAreas } from "@data/site";
+import { lab, quickStats } from "@data/site";
 
 const base = import.meta.env.BASE_URL;
 const heroImage = `${base}assets/ids-hero.png`;
@@ -45,19 +44,6 @@ const withBase = (href: string) => `${base}${href.replace(/^\//, "")}`;
       <div class="callout">
         <h2>Recruiting motivated students</h2>
         <p>{lab.recruitment}</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <SectionHeading
-        eyebrow="Research"
-        title="Architecture research grounded in real systems"
-        text="Our research portfolio spans digital VLSI, AI accelerators, neuromorphic computing, and hardware-oriented optimization."
-      />
-      <div class="grid two">
-        {researchAreas.map((area) => <ResearchCard {...area} />)}
       </div>
     </div>
   </section>

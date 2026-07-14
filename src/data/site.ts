@@ -20,7 +20,6 @@ export const navItems = [
 ];
 
 export const quickStats = [
-  { value: "4", label: "Core research areas" },
   { value: "14+", label: "Selected publications" },
   { value: "10+", label: "Current members and alumni" },
 ];
