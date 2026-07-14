@@ -431,9 +431,35 @@ img {
   gap: 5px;
 }
 
+.member-name-row {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
 .member-meta small {
   color: var(--blue);
   font-weight: 800;
+}
+
+.member-portfolio-link {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  border: 1px solid rgba(39, 92, 141, 0.2);
+  border-radius: 999px;
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 1.2;
+  padding: 4px 8px;
+  background: #f4f8fb;
+}
+
+.member-portfolio-link:hover {
+  border-color: rgba(39, 92, 141, 0.38);
+  color: var(--green-strong);
 }
 
 .member-email {

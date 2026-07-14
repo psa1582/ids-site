@@ -34,7 +34,22 @@ const photoSrc = member.photo
   }
   <div class="member-meta">
     <small>{member.role}</small>
-    <h3>{member.name}</h3>
+    <div class="member-name-row">
+      <h3>{member.name}</h3>
+      {
+        member.portfolioUrl && (
+          <a
+            class="member-portfolio-link"
+            href={member.portfolioUrl}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={`${member.name} portfolio`}
+          >
+            Portfolio
+          </a>
+        )
+      }
+    </div>
     {member.email && <a class="member-email" href={`mailto:${member.email}`}>{member.email}</a>}
   </div>
   {member.interests && member.interests.length > 0 && (

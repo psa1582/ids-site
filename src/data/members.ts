@@ -5,6 +5,7 @@ export type Member = {
   interests?: string[];
   photo?: string;
   photoAlt?: string;
+  portfolioUrl?: string;
 };
 
 export const professor: Member = {
@@ -24,12 +25,7 @@ export const phdStudents: Member[] = [
     photo: "members/seungheon-baek.jpg",
     photoAlt: "Seungheon Baek portrait",
     interests: ["Neuromorphic Systems"],
-  },
-  {
-    name: "Kyuseok Nam",
-    role: "PhD / Combined MS-PhD Student",
-    email: "nam.kyuseok@g.skku.edu",
-    interests: ["Accelerating Generative AI"],
+    portfolioUrl: "",
   },
   {
     name: "Jongyeop Kim",
@@ -38,6 +34,7 @@ export const phdStudents: Member[] = [
     photo: "members/jongyeop-kim.jpg",
     photoAlt: "Jongyeop Kim portrait",
     interests: ["Accelerator for Transformers", "Neuromorphic Systems"],
+    portfolioUrl: "",
   },
   {
     name: "Jinhyeong Park",
@@ -46,6 +43,7 @@ export const phdStudents: Member[] = [
     photo: "members/jinhyeong-park.jpg",
     photoAlt: "Jinhyeong Park portrait",
     interests: ["Network-on-Chip", "AI Accelerators"],
+    portfolioUrl: "",
   },
   {
     name: "Younggil Jeong",
@@ -54,22 +52,31 @@ export const phdStudents: Member[] = [
     photo: "members/younggil-jeong.jpg",
     photoAlt: "Younggil Jeong portrait",
     interests: ["Network-on-Chip", "AI Accelerators"],
+    portfolioUrl: "",
   },
   {
     name: "Beomjin Kim",
     role: "PhD / Combined MS-PhD Student",
     email: "kimb@g.skku.edu",
     interests: ["Neural Processing Unit"],
+    portfolioUrl: "",
   },
   {
     name: "Wonjong Park",
     role: "PhD / Combined MS-PhD Student",
     email: "dnjswhd71@g.skku.edu",
     interests: ["Network-on-Chip"],
+    portfolioUrl: "",
   },
 ];
 
 export const msStudents: Member[] = [
+  {
+    name: "Kyuseok Nam",
+    role: "MS Student",
+    email: "nam.kyuseok@g.skku.edu",
+    interests: ["Accelerating Generative AI"],
+  },
   {
     name: "Donghyun Nam",
     role: "MS Student",
