@@ -221,17 +221,17 @@ img {
 .stat-strip {
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-  gap: 44px;
+  gap: 1px;
   width: min(1120px, calc(100% - 40px));
-  margin: 0 auto;
-  padding: 26px 0;
+  margin: -1px auto 0;
+  border: 1px solid var(--line);
+  border-top: 0;
+  background: var(--line);
 }
 
 .stat {
-  border: 1px solid var(--line);
-  border-radius: 8px;
   background: var(--surface);
-  padding: 30px 24px;
+  padding: 28px 24px;
   text-align: center;
 }
 
@@ -783,7 +783,6 @@ img {
   }
 
   .stat-strip {
-    gap: 14px;
     width: min(100% - 40px, 1120px);
   }
 
